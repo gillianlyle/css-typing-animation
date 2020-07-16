@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>CSS animation typing effect</title>
+
+    <style>
+        body{display:flex;}
+        h1 {
+            animation: 
+                typing 2.5s steps(24),
+                blink .75s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid; 
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+            
+        /* The typewriter cursor effect */
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This is a typing effect.</h1>
+    </header>
+</body>
+</html>
